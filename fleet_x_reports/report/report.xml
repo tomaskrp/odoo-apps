@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2018 (Tomas Karpovic <tomas.karpovic@gmail.com>)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+<record id="vehicle_rental_report_fleet_vehicle" model="ir.actions.report.xml">
+    <field name="name">Vehicle Rental Report</field>
+    <field name="type">ir.actions.report.xml</field>
+    <field name="model">fleet.vehicle</field>
+    <field name="report_name">vehicle_rental_report</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">odt</field>
+    <field name="module">fleet_x_reports</field>
+    <field name="py3o_is_local_fusion" eval="1"/>
+    <field name="py3o_multi_in_one" eval="1"/>
+    <field name="py3o_template_fallback">report/vehicle_rental_report.odt</field>
+</record>
+
+<record id="vehicle_rental_report_print_action" model="ir.values">
+    <field eval="'action'" name="key" />
+    <field eval="'client_print_multi'" name="key2" />
+    <field name="model">fleet.vehicle</field>
+    <field name="name">Vehicle Rental Report</field>
+    <field eval="'ir.actions.report.xml,'+str(vehicle_rental_report_fleet_vehicle)" name="value" />
+</record>
+</odoo>
