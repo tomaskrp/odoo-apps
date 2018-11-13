@@ -15,6 +15,7 @@
     "data": [
         "data/fleet_vehicle_data.xml",
         "report/report.xml",
+        "wizard/vehicle_rental_report_wizard_view.xml",
     ],
     'installable': True
 }

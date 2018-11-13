@@ -16,12 +16,4 @@
     <field name="py3o_multi_in_one" eval="1"/>
     <field name="py3o_template_fallback">report/vehicle_rental_report.odt</field>
 </record>
-
-<record id="vehicle_rental_report_print_action" model="ir.values">
-    <field eval="'action'" name="key" />
-    <field eval="'client_print_multi'" name="key2" />
-    <field name="model">fleet.vehicle</field>
-    <field name="name">Vehicle Rental Report</field>
-    <field eval="'ir.actions.report.xml,'+str(vehicle_rental_report_fleet_vehicle)" name="value" />
-</record>
 </odoo>
