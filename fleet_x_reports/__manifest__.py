@@ -13,6 +13,7 @@
         "report_py3o_fusion_server",
     ],
     "data": [
+        "data/fleet_vehicle_data.xml",
         "report/report.xml",
     ],
     'installable': True

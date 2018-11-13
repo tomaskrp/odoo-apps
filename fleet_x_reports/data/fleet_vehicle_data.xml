@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+<record id="ir_cron_vehicle_rental_report_mailer" model="ir.cron">
+    <field name="name">Vehicle Rental Report Mailer</field>
+    <field name="interval_number">7</field>
+    <field name="interval_type">days</field>
+    <field name="numbercall">-1</field>
+    <field name="model" eval="'fleet.vehicle'"/>
+    <field name="function" eval="'_send_vehicle_rental_report'"/>
+    <field name="active" eval="True" />
+</record>
+</data>
+</odoo>
